@@ -1,0 +1,1 @@
+Anomalias gravimetricas es una de cuatro tareas a realizar del archivo "Instrucciones metodologicas" para la materia Teoria y figura de la Tierra del 4to curso de la carrera de Ingenieria Geodesica de la Universidad Estatal de Geodesia y Cartografia de Moscù.
