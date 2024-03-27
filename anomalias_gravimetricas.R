@@ -20,10 +20,11 @@ E14A39
 
 # Datos de entrada de la estacion gravimetrica
 
-grados <- 35
-minutos <- 40.31
-altitud <- 522
-gravedad_observada <- 979644.37
+id <- c(1195, 1211, 1218, 1224, 1229, 1247, 1252, 1254, 1262)
+grados <- c(35, 35, 35, 35, 35, 35, 35, 35, 35)
+minutos <- c(40.31, 40.63, 40.88, 41.08, 41.26, 41.60, 41.79, 41.82, 42.14)
+altitud <- c(522, 978, 833, 1033, 795, 710, 637, 614, 582)
+gravedad_observada <- c(979644.37, 979552.35, 979579.72, 979540.38, 979591.90, 979602.24, 979619.52, 979624.29, 979628.49)
 
 # Calculo de la latitud (debe estar en radianes)
 
@@ -56,8 +57,6 @@ anomalia_aire_libre <- gravedad_observada - gravedad_normal
 # Calculo de anomalia de bouguer
 
 anomalia_bouguer <- anomalia_aire_libre - correccion_capa_intermedia
-
-
 
 
 
