@@ -35,8 +35,11 @@ estaciones_gravimetricas <- data.frame(id, grados, minutos, altitud, gravedad_ob
 
 # Calculo de la latitud (debe estar en radianes)
 
-latitud_decimal <- grados + (minutos / 60)
-latitud <- latitud_decimal * (pi / 180)
+latitud <- function(grados, minutos){
+  latitud_decimal <- grados + (minutos / 60)
+  lat <- latitud_decimal * (pi / 180)
+  return(lat)
+}
 
 # Calcular la gravedad normal sobre el elipsoide en la latitud de la 
 # estacion gravimetrica. 
