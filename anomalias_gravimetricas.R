@@ -1,3 +1,6 @@
+install.packages("tidyverse")
+library(tidyverse)
+
 "
 Instrucciones metodologicas para la relizacion del trabajo de control No.1
 del curso:
@@ -62,6 +65,14 @@ anomalia_aire_libre <- gravedad_observada - gravedad_normal
 
 anomalia_bouguer <- anomalia_aire_libre - correccion_capa_intermedia
 
+# Agregamos las variables al data frame con la funcion mutate() del paquete tidyverse
+
+estaciones_gravimetricas <- mutate(estaciones_gravimetricas, gravedad_normal_elipsoide, 
+                                   correccion_aire_libre, 
+                                   gravedad_normal, 
+                                   correccion_capa_intermedia,
+                                   anomalia_aire_libre,
+                                   anomalia_bouguer)
 
 
 
