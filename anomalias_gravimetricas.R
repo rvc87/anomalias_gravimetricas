@@ -44,9 +44,12 @@ latitud <- function(grados, minutos){
 # Calcular la gravedad normal sobre el elipsoide en la latitud de la 
 # estacion gravimetrica. 
 
-a <- sin(latitud) ^ 2
-b <- sin(latitud * 2 ) ^ 2
-gravedad_normal_elipsoide <- 978030 * (1 + 0.005302 * a - 0.000007 * b)
+gravedad_normal_elipsoide <- function(lat){
+  a <- sin(lat) ^ 2
+  b <- sin(lat * 2 ) ^ 2
+  grav_normal_elipsoide <- 978030 * (1 + 0.005302 * a - 0.000007 * b)
+  return(grav_normal_elipsoide)
+}
 
 # Calcular la correccion al aire libre
 
@@ -76,9 +79,3 @@ estaciones_gravimetricas <- mutate(estaciones_gravimetricas, gravedad_normal_eli
                                    correccion_capa_intermedia,
                                    anomalia_aire_libre,
                                    anomalia_bouguer)
-
-
-
-
-
-
