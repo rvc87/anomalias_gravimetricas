@@ -9,22 +9,23 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Introduccion
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+  Antes de comenzar a realizar los calculos para obtener las anomalias gravimetricas, haremos un analisis previo de los datasets que utilizaremos en este ejercicio.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Cargar paquetes
 
-```{r cars}
-summary(cars)
+ Haremos uso del paquete Tidyverse, ya que al ser una colección de paquetes en R nos permite realizar de manera mas accesible la manipulación, exploración y visualización de los conjuntos de datos que usaremos para realizar los calculos.
+
+```{r}
+install.packages("tidyverse")
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+  Ahora para poder hacer uso de esta coleccion de paquetes, es necesario cargar la libreria con la funcion 'library()':
+  
+```{r}
+library(tidyverse)
 ```
+  Ya contamos con estos multiples paquetes como readr que nos permitira importar archivos para convertirlos en dataframes, asi como tambien dplyr para la manipulacion de los datos y despues ggplot para poder crear visualizaciones.
+  Una vez hecho lo anterior daremos paso a la importacion de los archivos para convertirlos en dataframes.
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
