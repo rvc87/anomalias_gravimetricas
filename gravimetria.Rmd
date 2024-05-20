@@ -29,3 +29,40 @@ library(tidyverse)
   Ya contamos con estos multiples paquetes como readr que nos permitira importar archivos para convertirlos en dataframes, asi como tambien dplyr para la manipulacion de los datos y despues ggplot para poder crear visualizaciones.
   Una vez hecho lo anterior daremos paso a la importacion de los archivos para convertirlos en dataframes.
 
+## Importacion de datasets
+
+  Los datos de este proyecto provienen del acervo de estaciones geodesicas de INEGI la cual esta 
+constituida por mas de 170,000 estaciones geodesicas materializadas sobre el terreno con una placa
+empotrada que identifica a cada una de ellas.
+Las estaciones geodesicas estan distribuidas en la republica mexicana se calsifica en tres capas
+de interes: 
+
+* Red Geodesica Vertical.
+* Red Geodesica Horizontal.
+* Red Geodesica Gravimetrica.
+
+  Los datos fueron descargados por Vargas Castro Roberto durante la semana del 13 mayo del 2024.
+  
+```{r}
+gravimetrica <- read_csv("gravimetrica.csv")
+```
+
+  Dataset (gravimetrica) correspondiente a las estaciones de la red geodesica gravimetrica. Seran necesesarios para resolver el ejercicio los datos:
+  
+  * Denominacion
+  * Gravedad
+  * Correccion Topografica
+  * Anomalia del aire libre
+  * Anomalia de bouguer simple
+  
+```{r}
+horizontal <- read_csv("horizontal.csv")
+```
+
+  Dataset (horizontal) correspondiente a las estaciones de la red geodesica horizonatl. Seran necesesarios para resolver el ejercicio los datos:
+  
+  * Denominacion
+  * LatitudDec
+  * LongituDec
+  * Altura elipsoidal
+
