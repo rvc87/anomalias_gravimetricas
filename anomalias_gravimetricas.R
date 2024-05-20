@@ -21,15 +21,13 @@ Se utilizara como dataset, las estaciones gravimetricas de la carta topografica
 E14A39
 "
 
-# Importar data frame
+# Importacion de datos de la red geodesica gravimetrica
 
-## Se agregan estaciones de la red geodesia horizntal de INEGI
+gravimetrica <- read_csv("gravimetrica.csv")
 
-horizontal <- read_csv("horizontal/horizontal.csv")
+# Importacion de datos de la red geodesica horizontal
 
-## Se agregan estaciones de la red geodesia gravimetrica de INEGI
-
-gravimetrica <- read_csv("gravimetrica/gravimetrica.csv", locale=locale(encoding="latin1"))
+horizontal <- read_csv("horizontal.csv")
 
 # Calculo de la latitud (debe estar en radianes)
 
