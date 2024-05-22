@@ -66,3 +66,15 @@ horizontal <- read_csv("horizontal.csv")
   * LongituDec
   * Altura elipsoidal
 
+## Explorar los datasets
+
+```{r}
+glimpse(gravimetrica)
+```
+  El dataset cuenta con 28 variables y 28,281 observaciones, para el ejercicio solo seran necesarias pocas variables asi que posteriormente se procedera a hacer la limpieza del dataset y algun formateado en sus variables. 
+  
+```{r}
+glimpse(horizontal)
+```
+  
+  El dataset cuenta con 18 variables y 95,228 observaciones, para el ejercicio solo seran necesarias pocas variables asi que posteriormente se procedera a hacer la limpieza del dataset y algun formateado en sus variables.
